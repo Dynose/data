@@ -1,0 +1,132 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Dynose Data - Daily updates on tech, games, and sports with a beautiful UI." />
+  <meta name="keywords" content="Tech News, Game News, Sports News, Dynose Data Blog" />
+  <meta name="author" content="Dynose" />
+  <title>Dynose Data</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: linear-gradient(to right, #869eeb, #00aaff); color: #222; transition: background 0.3s, color 0.3s; }
+    header { background: linear-gradient(to right, #131413bb, #b66060); color: #fff; padding: 20px; text-align: center; }
+    header h1 { font-size: 2.5rem; color: #fff }
+    nav { display: flex; justify-content: center; gap: 30px; margin-top: 10px; }
+    nav a { color: #f8f7f2; text-decoration: none; font-size: 1.1rem; }
+    .hero { padding: 50px 20px; background: url("images/TechNews.jpg") no-repeat center center/cover; color: #040b2b; text-align: center; }
+    .hero h2 { font-size: 2.8rem; margin-bottom: 20px; text-shadow: 2px 2px 4px #000; }
+    .container { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; padding: 40px; }
+    .post-card { background: #fff; box-shadow: 0 0 10px rgba(0,0,0,0.1); border-radius: 12px; overflow: hidden; transition: transform 0.3s; cursor: pointer; text-decoration: none; color: inherit; }
+    .post-card:hover { transform: scale(1.02); }
+    .post-card img { width: 100%; height: 180px; object-fit: cover; }
+    .post-card .content { padding: 15px; }
+    .post-card h3 { font-size: 1.4rem; margin-bottom: 10px; }
+    .post-card p { font-size: 0.95rem; color: #555; }
+    .newsletter { padding: 30px; text-align: center; background: #222; color: #fff; }
+    .newsletter input[type=email] { padding: 10px; width: 300px; max-width: 90%; border: none; border-radius: 8px; margin-right: 10px; }
+    .newsletter button { padding: 10px 20px; border: none; background: #00aaff; color: #fff; border-radius: 8px; cursor: pointer; }
+    .dark-mode { background: #111; color: #f1f1f1; }
+    .toggle-theme { position: fixed; top: 20px; right: 20px; background: #222; color: #fff; border: none; padding: 10px 15px; border-radius: 8px; cursor: pointer; z-index: 1000; }
+    footer { background: #111; color: #aaa; padding: 40px 20px; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
+    footer h4 { color: #fff; margin-bottom: 15px; }
+    footer ul { list-style: none; }
+    footer ul li { margin-bottom: 10px; }
+    footer ul li a { color: #aaa; text-decoration: none; }
+    footer ul li a:hover { text-decoration: underline; }
+    .copyright { text-align: center; padding: 20px; background: #000; color: #888; font-size: 0.9rem; }
+    .search-filter { text-align: center; margin: 20px; }
+    .search-filter input { padding: 10px; width: 300px; max-width: 90%; border-radius: 8px; border: 1px solid #ccc; }
+  </style>
+</head>
+<body>
+  <button class="toggle-theme" onclick="toggleTheme()">Dark Mode</button>
+  <header>
+    <h1>Dynose Data</a>
+    </h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="blog.html" class="btn">Blogs</a>
+      <a href="#">Tech</a>
+      <a href="#">Games</a>
+      <a href="#">Sports</a>
+      <a href="contact.html">Contact</a>
+      <a href="about.html">About Us</a>
+    </nav>
+  </header>
+  <section class="hero">
+    <h2>Welcome to Dynose Data – Your Daily Dose of Tech, Games & Sports</h2>
+  </section> <div class="search-filter">
+    <input type="text" id="searchBox" placeholder="Search articles..." onkeyup="filterPosts()">
+  </div> <section class="container" id="postContainer">
+    <a href="post1.html" class="post-card">
+      <img src="images/TechNews.jpg" alt="Tech News">
+      <div class="content">
+        <h3>Latest Tech Update</h3>
+        <p>Discover the newest trends in technology and innovations shaping the future.</p>
+      </div>
+    </a>
+    <a href="post2.html" class="post-card">
+      <img src="https://img.freepik.com/premium-photo/gamer-work-space-concept-top-view-gaming-gear-mouse-keyboard-joystick-headset-mobile-joystick-ear-headphone-mouse-pad-with-rgb-color-black-table-background_1048944-8956918.jpg?uid=R195438528&ga=GA1.1.1090631437.1744217251&semt=ais_hybrid&w=740" alt="Gaming and gaming console">
+      <div class="content">
+        <h3>Game Releases This Week</h3>
+        <p>Explore the top trending games making waves in the gaming world.</p>
+      </div>
+    </a>
+    <a href="post3.html" class="post-card">
+      <img src="https://img.freepik.com/free-vector/sport-equipment-concept_1284-13034.jpg?uid=R195438528&ga=GA1.1.1090631437.1744217251&semt=ais_hybrid&w=740" alt="sports">
+      <div class="content">
+        <h3>Sports News</h3>
+        <p>Catch up on the latest sports highlights and thrilling match results.</p>
+      </div>
+    </a>
+    <a href="post3.html" class="post-card">
+      <img src="https://img.freepik.com/free-psd/red-isolated-car_23-2151852884.jpg?uid=R195438528&ga=GA1.1.1090631437.1744217251&semt=ais_hybrid&w=740" alt="Auto and vehicles"
+      <div class="content">
+        <h3>Auto and Vehicles</h3>
+        <p>Latest updates on cars, bikes, electric vehicles, maintenance tips, reviews, and launches for every auto enthusiast and daily commuter.</p>
+      </div>
+  </section> <section class="newsletter">
+    <h3>Subscribe to Our Newsletter</h3>
+    <p>Get all the latest posts straight to your inbox!</p>
+    <input type="email" placeholder="Your Email">
+    <button>Subscribe</button>
+  </section> <footer>
+    <div>
+      <h4>About Dynose Data</h4>
+      <p>Dynose Data is your go-to source for daily tech, game, and sports updates. Stay informed with our engaging content and beautiful website.</p>
+    </div>
+    <div>
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Disclaimer</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contact Us</h4>
+      <ul>
+        <li><i class="fas fa-envelope"></i> contact@dynosedata.com</li>
+        <li><i class="fas fa-map-marker-alt"></i> India</li>
+      </ul>
+    </div>
+  </footer> <div class="copyright">
+    &copy; 2025 Dynose Data. All rights reserved.
+  </div> <script>
+    function toggleTheme() {
+      document.body.classList.toggle("dark-mode");
+    }
+
+    function filterPosts() {
+      const query = document.getElementById("searchBox").value.toLowerCase();
+      const posts = document.querySelectorAll(".post-card");
+      posts.forEach(post => {
+        const text = post.innerText.toLowerCase();
+        post.style.display = text.includes(query) ? "block" : "none";
+      });
+    }
+  </script></body>
+</html>

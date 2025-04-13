@@ -1,0 +1,137 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Latest Blog Posts from Dynose Data">
+  <title>Blog | Dynose Data</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background: #f9f9f9;
+      color: #111;
+    }
+    header {
+      background: #111;
+      color: #fff;
+      padding: 40px 20px;
+      text-align: center;
+    }
+    h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+    .search-bar {
+      max-width: 600px;
+      margin: 30px auto;
+      padding: 0 20px;
+    }
+    .search-bar input {
+      width: 100%;
+      padding: 12px;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+    .blog-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      padding: 40px;
+      max-width: 1200px;
+      margin: auto;
+    }
+    .blog-card {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: transform 0.3s, opacity 0.3s;
+    }
+    .blog-card:hover {
+      transform: translateY(-5px);
+    }
+    .blog-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+    .blog-content {
+      padding: 20px;
+    }
+    .blog-content h3 {
+      margin-top: 0;
+    }
+    .blog-content p {
+      color: #555;
+    }
+    .blog-content a {
+      display: inline-block;
+      margin-top: 10px;
+      color: #111;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    footer {
+      background: #111;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+    .hidden {
+      display: none !important;
+    }
+  </style>
+</head>
+<body>
+  <header data-aos="fade-down">
+    <h1>Dynose Data Blog</h1>
+    <p>Latest updates on Tech, Gaming, and Sports</p>
+  </header> <div class="search-bar" data-aos="fade-up">
+    <input type="text" id="searchInput" placeholder="Search blog posts...">
+  </div> <div class="blog-container" id="blogContainer">
+    <div class="blog-card" data-aos="fade-up">
+      <img src="images/blog1.jpg" alt="Blog 1 Thumbnail">
+      <div class="blog-content">
+        <h3>Title of Blog Post One</h3>
+        <p>Short summary of what this blog post is about...</p>
+        <a href="blog1.html">Read More →</a>
+      </div>
+    </div><div class="blog-card" data-aos="fade-up" data-aos-delay="100">
+  <img src="images/blog2.jpg" alt="Blog 2 Thumbnail">
+  <div class="blog-content">
+    <h3>Title of Blog Post Two</h3>
+    <p>Another short summary to intrigue the reader...</p>
+    <a href="blog2.html">Read More →</a>
+  </div>
+</div>
+
+<div class="blog-card" data-aos="fade-up" data-aos-delay="200">
+  <img src="images/blog3.jpg" alt="Blog 3 Thumbnail">
+  <div class="blog-content">
+    <h3>Title of Blog Post Three</h3>
+    <p>Brief teaser content of the third blog post...</p>
+    <a href="blog3.html">Read More →</a>
+  </div>
+</div>
+
+  </div> <footer data-aos="fade-up">
+    &copy; 2025 Dynose Data. All rights reserved.
+  </footer> <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script> <script>
+    AOS.init({ duration: 800, once: true });
+
+    const searchInput = document.getElementById('searchInput');
+    const blogCards = document.querySelectorAll('.blog-card');
+
+    searchInput.addEventListener('input', () => {
+      const searchValue = searchInput.value.toLowerCase();
+
+      blogCards.forEach(card => {
+        const text = card.innerText.toLowerCase();
+        card.classList.toggle('hidden', !text.includes(searchValue));
+      });
+    });
+  </script></body>
+</html>
